@@ -1,0 +1,12 @@
+{
+  "name": "coding-interview",
+  "description": "Solutions to coding interview questions",
+  "repository" : {
+    "type" : "git",
+    "url" : "http://github.com/randy909/coding-interview.git"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "mocha": "*"
+  }
+}
