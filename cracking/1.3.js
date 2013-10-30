@@ -16,3 +16,5 @@ module.exports = function (str) {
   arr.splice(tail, Number.MAX_VALUE);
   return arr.join('');
 }
+
+// TODO: implement the alternate version of this algo
