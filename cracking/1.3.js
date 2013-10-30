@@ -1,12 +1,18 @@
 module.exports = function (str) {
   var arr = str.split('');
-  for (var idx = 0; idx < arr.length; ++idx) {
-    var current = arr[idx];
-    for (var idy = idx + 1; idy < arr.length; ++idy) {
-      if (current === arr[idy]) {
-        arr[idy] = null;
-      }
+  var tail = 1;
+  for (var outer = 1; outer < arr.length; ++outer) {
+    var inner = 0;
+    // scan to see if we already saw this character before
+    for (; inner < tail; ++inner) {
+      if (arr[outer] === arr[inner]) break;
+    }
+    // if we didn't find a duplicate of arr[outer]
+    if (inner === tail) {
+      arr[tail] = arr[outer];
+      ++tail;
     }
   }
+  arr.splice(tail, Number.MAX_VALUE);
   return arr.join('');
 }
