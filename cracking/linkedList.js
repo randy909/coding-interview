@@ -48,6 +48,23 @@ function LinkedList() {
     arr.push(node.value);
     return arr;
   }
+
+  this.findFirstNode = function (value) {
+    var node = this.head;
+    while (node) {
+      if (node.value === value)
+        return node;
+      node = node.next;
+    }
+  }
+
+  this.tail = function () {
+    var node = this.head;
+    while (node.next) {
+      node = node.next;
+    }
+    return node;
+  }
 }
 
 module.exports = LinkedList;
