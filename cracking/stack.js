@@ -10,7 +10,7 @@ function Stack () {
   }
 
   this.pop = function () {
-    if (!this.top)
+    if (this.isEmpty())
       return;
     var value = this.top.value;
     this.top = this.top.next;
@@ -18,7 +18,7 @@ function Stack () {
   }
 
   this.peek = function () {
-    if (!this.top)
+    if (this.isEmpty())
       return;
     return this.top.value;
   }
@@ -31,6 +31,10 @@ function Stack () {
       node = node.next;
     }
     return arr;
+  }
+
+  this.isEmpty = function () {
+    return !this.top;
   }
 }
 
