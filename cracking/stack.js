@@ -17,6 +17,12 @@ function Stack () {
     return value;
   }
 
+  this.peek = function () {
+    if (!this.top)
+      return;
+    return this.top.value;
+  }
+
   this.toArray = function () {
     var node = this.top;
     var arr = [];

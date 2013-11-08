@@ -6,7 +6,7 @@
     "url" : "http://github.com/randy909/coding-interview.git"
   },
   "devDependencies": {
-    "chai": "*",
+    "chai-stack": "*",
     "mocha": "*"
   }
 }
