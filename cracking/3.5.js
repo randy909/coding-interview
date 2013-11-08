@@ -1,5 +1,9 @@
 // Implement a MyQueue class which implements a queue using two stacks
 
+// TODO: add implementation to reduce swapping
+// We can get away with only having the swap in the remove().
+// See the solution in the book.
+
 var Stack = require('./stack.js');
 
 function MyQueue() {
