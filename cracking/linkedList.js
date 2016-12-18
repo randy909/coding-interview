@@ -10,7 +10,7 @@ function LinkedList() {
     if (!this.head) {
       this.head = new Node(value, null);
     } else {
-      var tail = this.head;
+      let tail = this.head;
       while (tail.next) {
         tail = tail.next;
       }
@@ -27,7 +27,7 @@ function LinkedList() {
       }
       return;
     }
-    var node = this.head;
+    let node = this.head;
     while (node.next) {
       if (node.next.value === value) {
         node.next = node.next.next;
@@ -38,8 +38,8 @@ function LinkedList() {
   }
 
   this.toArray = function () {
-    var arr = [];
-    var node = this.head;
+    const arr = [];
+    let node = this.head;
     if (!node) return arr;
     while (node.next) {
       arr.push(node.value);
@@ -50,7 +50,7 @@ function LinkedList() {
   }
 
   this.findFirstNode = function (value) {
-    var node = this.head;
+    let node = this.head;
     while (node) {
       if (node.value === value)
         return node;
@@ -59,7 +59,7 @@ function LinkedList() {
   }
 
   this.tail = function () {
-    var node = this.head;
+    let node = this.head;
     while (node.next) {
       node = node.next;
     }

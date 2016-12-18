@@ -1,9 +1,9 @@
-var expect = require('chai').expect;
-var LinkedList = require('../../cracking/linkedList.js');
+const expect = require('chai').expect;
+const LinkedList = require('../../cracking/linkedList.js');
 
 describe('appendToTail', function() {
   it('should append to tail', function() {
-    var list = new LinkedList();
+    const list = new LinkedList();
     list.appendToTail(14);
     list.appendToTail(2);
     expect(list.toArray()).eql([14, 2]);
@@ -12,7 +12,7 @@ describe('appendToTail', function() {
 
 describe('deleteNode', function () {
   it('should delete the head item', function () {
-    var list = new LinkedList();
+    const list = new LinkedList();
     list.appendToTail(14);
     list.appendToTail(4);
     list.deleteNode(14);
@@ -20,7 +20,7 @@ describe('deleteNode', function () {
   });
 
   it('should delete an item', function () {
-    var list = new LinkedList();
+    const list = new LinkedList();
     list.appendToTail(14);
     list.appendToTail(4);
     list.appendToTail(5);
@@ -29,7 +29,7 @@ describe('deleteNode', function () {
   });
 
   it('should delete the only item', function () {
-    var list = new LinkedList();
+    const list = new LinkedList();
     list.appendToTail(14);
     list.deleteNode(14);
     expect(list.toArray()).eql([]);
