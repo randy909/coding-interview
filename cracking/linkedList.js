@@ -1,12 +1,16 @@
-function Node(value, next) {
-  this.value = value;
-  this.next = next;
+class Node {
+  constructor(value, next) {
+    this.value = value;
+    this.next = next;
+  }
 }
 
-function LinkedList() {
-  this.head = null;
+class LinkedList {
+  constructor() {
+    this.head = null
+  }
 
-  this.appendToTail = function (value) {
+  appendToTail(value) {
     if (!this.head) {
       this.head = new Node(value, null);
     } else {
@@ -18,7 +22,7 @@ function LinkedList() {
     }
   }
 
-  this.deleteNode = function (value) {
+  deleteNode(value) {
     if (this.head.value === value) {
       if (!this.head.next) {
         this.head = null;
@@ -37,7 +41,7 @@ function LinkedList() {
     }
   }
 
-  this.toArray = function () {
+  toArray() {
     const arr = [];
     let node = this.head;
     if (!node) return arr;
@@ -49,7 +53,7 @@ function LinkedList() {
     return arr;
   }
 
-  this.findFirstNode = function (value) {
+  findFirstNode(value) {
     let node = this.head;
     while (node) {
       if (node.value === value)
@@ -58,7 +62,7 @@ function LinkedList() {
     }
   }
 
-  this.tail = function () {
+  tail() {
     let node = this.head;
     while (node.next) {
       node = node.next;
