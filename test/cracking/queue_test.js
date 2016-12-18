@@ -1,8 +1,8 @@
-var expect = require('chai').expect;
-var Queue = require('../../cracking/queue.js');
+const expect = require('chai').expect;
+const Queue = require('../../cracking/queue.js');
 
 it('enqueues and dequeues', function() {
-  var queue = new Queue();
+  const queue = new Queue();
   queue.enqueue(1);
   queue.enqueue(2);
   queue.enqueue(3);
@@ -13,7 +13,7 @@ it('enqueues and dequeues', function() {
 });
 
 it('can dequeue an empty queue', function() {
-  var queue = new Queue();
+  const queue = new Queue();
   expect(queue.dequeue()).eql(undefined);
   queue.enqueue(3);
   queue.dequeue();

@@ -1,6 +1,6 @@
 
-function Queue () {
-  this.enqueue = function (value) {
+class Queue {
+  enqueue(value) {
     if (!this.front) {
       this.last = { value: value };
       this.front = this.last;
@@ -10,17 +10,17 @@ function Queue () {
     }
   }
 
-  this.dequeue = function () {
+  dequeue() {
     if (!this.front)
       return;
-    var val = this.front.value;
+    const val = this.front.value;
     this.front = this.front.next;
     return val;
   }
 
-  this.toArray = function () {
-    var node = this.front;
-    var arr = [];
+  toArray() {
+    let node = this.front;
+    const arr = [];
     while (node) {
       arr.push(node.value);
       node = node.next;
